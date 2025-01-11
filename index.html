@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <!-- Bootstrap Icons CSS (for bi- icons) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS (for fas- icons) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <!-- Popper.js and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Ankit Dhiman</title>
+    <style>
+        .top-alert {
+            position: fixed;
+            top: 20px;
+            /* You can adjust the value as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1050;
+            /* Ensure it's above other content */
+            width: auto;
+            max-width: 80%;
+            /* Adjust width as needed */
+        }
+    </style>
+
+</head>
+
+<body class="main-content">
+
+    <header class="container-fluid header active" id="home">
+        <div class="header-content">
+            <div class="left-header">
+                <div class="h-shape"></div>
+                <div class="image">
+                    <!-- <img src="https://img.freepik.com/free-vector/hand-drawn-web-developers_23-2148819604.jpg?t=st=1735377173~exp=1735380773~hmac=c73accedc29def7cccabfc15bc2928dfb19149d442000776526c10d6d057f48c&w=740"
+                        alt=""> -->
+                    <img src="https://res.cloudinary.com/dojdau6b2/image/upload/v1736624353/myimage-removebg_jtgbo8.jpg"
+                        alt="">
+                </div>
+            </div>
+            <div class="right-header">
+                <h1 class="name">
+                    Hi, I'm <span>Ankit Dhiman.</span>
+
+                </h1>
+                <div id="callMe">Call Me : &nbsp;<a href="tel:+916265500635">+916265500635</a>
+                </div>
+                <p>
+                    Hey , I'm Front-end Developer. I did 10+ Projects. I love to
+                    create beautiful and functional websites.
+
+                </p>
+                <div class="btn-con">
+                    <a href="https://res.cloudinary.com/dojdau6b2/image/upload/v1735316467/Ankit_Dhiman_1_i26fvq.pdf"
+                        target="_blank" class="main-btn">
+                        <span class="btn-text">Download CV</span>
+                        <span class="btn-icon"><i class="fas fa-download"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- about section -->
+        <section class="container-fluid about" id="about">
+            <div class="main-title">
+                <h2>About <span>me</span><span class="bg-text">my stats</span></h2>
+            </div>
+            <div class="about-container">
+                <div class="left-about">
+                    <!-- <h4>Information About me</h4> -->
+                    <p>
+                        I’m a passionate Front-End Developer specializing in HTML, CSS, JavaScript, React, and
+                        Bootstrap. I create dynamic, responsive websites focused on design, user experience, and staying
+                        updated with the latest technologies.<br /> <br /> With a focus on clean code and seamless user
+                        experiences, I thrive on turning creative concepts into functional designs. Always exploring new
+                        technologies, I’m dedicated to improving my front-end development skills.
+                    </p>
+                    <div class="btn-con">
+                        <a href="https://res.cloudinary.com/dojdau6b2/image/upload/v1735316467/Ankit_Dhiman_1_i26fvq.pdf"
+                            target="_blank" class="main-btn">
+                            <span class="btn-text">Download CV</span>
+                            <span class="btn-icon"><i class="fas fa-download"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="right-about">
+                    <div class="about-item">
+                        <div class="abt-text">
+                            <p class="large-text" data-target="30">0+</p>
+                            <p class="small-text">Projects <br /> Completed</p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <div class="abt-text">
+                            <p class="large-text" data-target="10">0+</p>
+                            <p class="small-text">Self <br /> Projects</p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <div class="abt-text">
+                            <p class="large-text" data-target="20">0+</p>
+                            <p class="small-text">Clients <br /> reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="about-stats">
+                <h4 class="stat-title">My Skills</h4>
+                <div class="progress-bars">
+                    <div class="progress-bar">
+                        <p class="prog-title">HTML</p>
+                        <div class="progress-con">
+                            <p class="prog-text">95%</p>
+                            <div class="progress">
+                                <span class="html" data-percent="95"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="prog-title">CSS</p>
+                        <div class="progress-con">
+                            <p class="prog-text">90%</p>
+                            <div class="progress">
+                                <span class="css" data-percent="90"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="prog-title">Bootstrap</p>
+                        <div class="progress-con">
+                            <p class="prog-text">80%</p>
+                            <div class="progress">
+                                <span class="node" data-percent="80"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="prog-title">javascript</p>
+                        <div class="progress-con">
+                            <p class="prog-text">80%</p>
+                            <div class="progress">
+                                <span class="js" data-percent="80"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="prog-title">jQUERY</p>
+                        <div class="progress-con">
+                            <p class="prog-text">77%</p>
+                            <div class="progress">
+                                <span class="js" data-percent="77"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="prog-title">ReactJS</p>
+                        <div class="progress-con">
+                            <p class="prog-text">75%</p>
+                            <div class="progress">
+                                <span class="react" data-percent="75"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="prog-title">Node.js</p>
+                        <div class="progress-con">
+                            <p class="prog-text">67%</p>
+                            <div class="progress">
+                                <span class="react" data-percent="67"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="prog-title">Express.js</p>
+                        <div class="progress-con">
+                            <p class="prog-text">70%</p>
+                            <div class="progress">
+                                <span class="react" data-percent="70"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="prog-title">MongoDB</p>
+                        <div class="progress-con">
+                            <p class="prog-text">70%</p>
+                            <div class="progress">
+                                <span class="react" data-percent="70"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="prog-title">Wordpress</p>
+                        <div class="progress-con">
+                            <p class="prog-text">66%</p>
+                            <div class="progress">
+                                <span class="react" data-percent="66"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="stat-title">My Timeline</h4>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <p class="tl-duration">2024 - present</p>
+                    <h5>Back-end Projects <span> - Self</span></h5>
+                    <p>
+                        Recently, I am working on my skill, building Back-end projects.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <p class="tl-duration">2022 - present</p>
+                    <h5>HTML, CSS, and Javascript for Web Developers<span> - Programmers Point</span></h5>
+                    <ul>
+                        <li>Learned to build web application.</li>
+                        <li>Learned HTML , CSS , JAVASCRIPT , REACT.js, BOOSTRAP, jQUERY.</li>
+                        <li>Implemented learning by building projects.</li>
+                        <li>Build website assesments, build responsive web designs.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <p class="tl-duration">2023 - 2023</p>
+                    <h5> Certification in Responsive Web Desiging <span> - Tech Alfa Technology</span></h5>
+                    <ul>
+                        <li>Learned to build responsive web designs. </li>
+                        <li>Implemented learning by building projects.</li>
+                        <li>Build logical tasks using javascript and bootstrap.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <p class="tl-duration">2023 - 2023</p>
+                    <h5> Completed Figma design for selection interview <span> - Youtube</span></h5>
+
+                    <ul>
+                        <li>Learned how to use Figma for design.</li>
+                        <li>Learned to convert Figma designs into code.</li>
+                        <li>Gained experience working with responsive design.</li>
+                    </ul>
+                </div>
+                <!-- <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <p class="tl-duration">2023 - 2023</p>
+                    <h5>C & C++ Certification<span> - Universal Infomatics</span></h5>
+                    <p>
+                        • Understood the relevance of c & c++ in automation.<br>
+                        • Learned to write short c & c++ to perform automated actions. <br>
+                        • Understood the use of basic c & c++ structures i.e. strings, lists, <br>
+                    </p>
+                </div> -->
+                <!-- <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <p class="tl-duration">2017 - 2018</p>
+                    <h5>12th<span> -Indore, India</span></h5>
+                    <p>
+
+                    </p>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- portfolio section -->
+        <section class="container-fluid" id="portfolio">
+            <div class="main-title">
+                <h2>My <span id="portfolio-heading">Certifications</span></h2>
+            </div>
+            <p class="port-text">
+                Here is some of my work that I've done in various programming languages.
+            </p>
+            <div class="portfolios">
+                <div class="portfolio-item">
+                    <div class="image">
+                        <img src="https://img.freepik.com/free-vector/web-programming-background_1300-188.jpg?t=st=1735377068~exp=1735380668~hmac=6208832f0c37a1fa3701aa0b6c41473f25dde2c833ed492666ccb84e0e3f407c&w=740"
+                            alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3>HTML, CSS, and Javascript for Web Developers</h3>
+                        <div class="icons">
+                            <a href="https://github.com/321ankit" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="bi bi-globe2"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ankit-dhiman-2b8550268/" class="icon">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="image">
+                        <img src="https://img.freepik.com/free-vector/programmer-working-computer_23-2148312611.jpg?t=st=1735377234~exp=1735380834~hmac=ab60bb3dcbaa4165cc61cfa87ba0efa3aa13fcb8a7748aac1d7291a86e059d1e&w=740"
+                            alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3> Certification in Responsive Web Design</h3>
+                        <div class="icons">
+                            <a href="https://github.com/321ankit" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="bi bi-globe2"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ankit-dhiman-2b8550268/" class="icon">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="image">
+                        <img src="https://img.freepik.com/free-vector/programmers-concept-with-flat-design_23-2147838764.jpg?t=st=1735377344~exp=1735380944~hmac=d6dc94e582e33f9b84c5ef70fdc8958146aba05e993fa9af88f947be208a42c8&w=740"
+                            alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3>JavaScript Algorithms and Data Structures By freecodecamp</h3>
+                        <div class="icons">
+                            <a href="https://github.com/321ankit" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="bi bi-globe2"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ankit-dhiman-2b8550268/" class="icon">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="image">
+                        <img src="https://img.freepik.com/free-vector/application-development-infographic_1025-405.jpg?t=st=1735377537~exp=1735381137~hmac=eb6aef9db85ac07a0bc0a81ece9925450e28e7a82f44b72451195c1ae34788fe&w=740"
+                            alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3>Certification in Technical Support Fundamentals</h3>
+                        <div class="icons">
+                            <a href="https://github.com/321ankit" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="bi bi-globe2"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ankit-dhiman-2b8550268/" class="icon">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="image">
+                        <img src="https://img.freepik.com/free-vector/man-designing-web_1212-312.jpg?t=st=1735377619~exp=1735381219~hmac=ce3dad0f4dac26187bb96b26718ba1664a6e0b84dadfe4b59b8bd2de6bf57576&w=740"
+                            alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3>Certification in Course on C & C++</h3>
+                        <div class="icons">
+                            <a href="https://github.com/321ankit" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="bi bi-globe2"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ankit-dhiman-2b8550268/" class="icon">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- blog section -->
+        <section class="container-fluid" id="blogs">
+            <div class="blogs-content">
+                <div class="main-title">
+                    <h2>My <span>Projects</span><span class="bg-text">My Projects</span></h2>
+                </div>
+                <div class="blogs">
+                    <div class="blog">
+                        <img src="https://img.freepik.com/free-photo/close-up-hands-shot-gamer-pushing-keyboard-buttons-while-playing-online-shooter-video-game-vi_482257-2524.jpg?t=st=1735384870~exp=1735388470~hmac=55542988e6f9ac07658c9a2d52e42af2d376b9f0894c32a2dcfb210dea789965&w=740"
+                            alt="">
+                        <div class="blog-text">
+                            <h4>
+                                Cafe-Food Website
+                            </h4>
+                            <p>
+                                HTML, CSS, Javascript. <br>
+                                • Build responsive web designs. <br>
+                                • Implemented learning by building projects. <br>
+                                • Build Survey form, Product Landing Page and Personal Portfolio Webpage. <br>
+                                • Provided amazing design and effective user interface. <br>
+                                • Implemented responsive design in the app using media queries. <br>
+                            </p>
+                            <button class="blog-btn" onclick="toggleDescription(this)">
+                                view more
+                            </button>
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <img src="https://img.freepik.com/free-photo/businessman-writing-his-laptop-concept-image-woden-desk-travel-pot-grass-notes_482257-25378.jpg?t=st=1735384499~exp=1735388099~hmac=a83b87c6f050de087e2b7a4f21c9223885e7797f49c234c2e2c36b101816f58f&w=740"
+                            alt="">
+                        <div class="blog-text">
+                            <h4>
+                                Coffee-Clone-Projects
+                            </h4>
+                            <p>
+                                HTML, CSS, Tailwind CSS <br>
+                                • Implemented learning by building projects. <br>
+                                • Build Survey form, Product Landing Page and Personal Portfolio Webpage. <br>
+                                • Provided amazing design and effective user interface. <br>
+                                • Implemented responsive design in the app using media queries. <br>
+                            </p>
+                            <button class="blog-btn" onclick="toggleDescription(this)">
+                                view more
+                            </button>
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <img src="https://img.freepik.com/free-photo/flat-lay-desk-concept-with-smartphone-template_23-2148111435.jpg?t=st=1735384621~exp=1735388221~hmac=431ef1e15d361ff53bab3f4d2015898aa6b884fcc8811708c0ae195766f12312&w=740"
+                            alt="">
+                        <div class="blog-text">
+                            <h4>
+                                Nike Project.
+                            </h4>
+                            <p>
+                                HTML, CSS, Javascript. <br>
+                                • Provided the feature to the user. <br>
+                                • Implemented responsive design in the app using media queries. <br>
+                                • provided menu,home and proper website. <br>
+                                • Provided the user and hover section. <br>
+                            </p>
+                            <button class="blog-btn" onclick="toggleDescription(this)">
+                                view more
+                            </button>
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <img src="https://img.freepik.com/free-photo/watch-pen-near-folder-notebook_23-2147777796.jpg?t=st=1735385004~exp=1735388604~hmac=7d99a97190cb77d6423befb4275e589c45a89013c23d1dc97682550d546ced9b&w=740"
+                            alt="">
+                        <div class="blog-text">
+                            <h4>
+                                Weather-App
+                            </h4>
+                            <p>
+
+                                • Used HTML, CSS, Javascript, Tailwind CSS, Bootstrap Tailwind CSS to design the layout
+                                of the web page and made it responsive. <br>
+                                • Fetched weather data from the API. <br>
+                                • Implemented search functionality for various information such as humidity, sunrise and
+                                wind information. <br>
+                            </p>
+                            <button class="blog-btn" onclick="toggleDescription(this)">
+                                view more
+                            </button>
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <img src="https://img.freepik.com/free-photo/3d-rendering-futuristic-computer_23-2151004383.jpg?t=st=1735384785~exp=1735388385~hmac=195a689f95aef85218a40e744003add1f78b25b566d4fc8b46ed525088fe4566&w=740"
+                            alt="">
+                        <div class="blog-text">
+                            <h4>
+                                Amazon website
+                            </h4>
+                            <p>
+                                HTML, CSS, Javascript. <br>
+                                • Provided the feature to the user. <br>
+                                • Implemented responsive design in the app using media queries. <br>
+                                • provided menu,home and proper website. <br>
+                                • Provided link of actual website. <br>
+                            </p>
+                            <button class="blog-btn" onclick="toggleDescription(this)">
+                                view more
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- contact section -->
+        <section class="container-fluid contact" id="contact">
+            <div class="contact-container">
+                <div class="main-title">
+                    <h2>Contact <span>Me</span><span class="bg-text">Contact</span></h2>
+                </div>
+                <div class="contact-content-con">
+                    <div class="left-contact">
+                        <!-- <h4>Contact me here</h4> -->
+                        <p>
+                            Welcome to my contact page! Whether you're interested in my work, have any questions, or
+                            just want to connect, feel free to reach out. I love meeting new people and am always open
+                            to exciting opportunities. I'll get back to you as soon as I can!
+                        </p>
+                        <div class="contact-infomation">
+                            <div class="contact-item1">
+                                <div class="icon1">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <span>No. :</span>
+                                </div>
+                                <div class="contents1">
+                                    <p>
+                                        <span><a href="tel:+916265500635">+916265500635</a></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contact-item1">
+                                <div class="icon1">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Email :</span>
+                                </div>
+                                <div class="contents1">
+                                    <p>
+                                        <a href="mailto:dhimanankit291997@gmail.com"> dhimanankit291997@gmail.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contact-item1">
+                                <div class="icon1">
+                                    <i class="fas fa-user-graduate"></i>
+                                    <span>Edu. :</span>
+                                </div>
+                                <div class="contents1">
+                                    <p>
+                                        <span> DAVV University</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contact-item1">
+                                <div class="icon1">
+                                    <i class="fas fa-globe-africa"></i>
+                                    <span>Lang. :</span>
+                                </div>
+                                <div class="contents1">
+                                    <p>
+                                        <span> Hindi, English ( average )</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contact-item1">
+                                <div class="icon1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Loc. &nbsp;:</span>
+                                </div>
+                                <div class="contents1">
+                                    <p>Indore, India</p>
+                                </div>
+                            </div>
+                            <div class="contact-item1">
+                                <div class="icon1">
+                                    <i class="fab fa-github"></i>
+                                    <span>Git. :</span>
+                                </div>
+                                <div class="contents1">
+                                    <p>
+                                        <a href="https://github.com/321ankit"
+                                            target="_blank">https://github.com/321ankit</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contact-item1">
+                                <div class="icon1">
+                                    <i class="bi bi-linkedin"></i>
+                                    <span>Link. :</span>
+                                </div>
+                                <div class="contents1">
+                                    <p>
+                                        <a href="https://www.linkedin.com/in/ankit-dhiman-2b8550268/"
+                                            target="_blank">https://www.linkedin.com/in/ankit-dhiman-2b8550268/</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="right-contact">
+                        <form action="" class="contact-form">
+                            <div class="input-control i-c-2">
+                                <input type="text" required placeholder="YOUR NAME">
+                                <input type="email" required placeholder="YOUR EMAIL">
+                            </div>
+                            <div class="input-control">
+                                <input type="text" required placeholder="ENTER SUBJECT">
+                            </div>
+                            <div class="input-control">
+                                <textarea name="" id="" cols="15" rows="8" placeholder="Message Here..."></textarea>
+                            </div>
+                            <div class="submit-btn">
+                                <a href="Chetna verma resume.pdf" class="main-btn">
+                                    <span class="btn-text">Download CV </span>
+                                    <span class="btn-icon"><i class="fas fa-download"></i></span>
+                                </a>
+                            </div>
+                        </form>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- whats app chat button -->
+    <div id="whatsappIcon">
+        <a href="https://wa.me/+916265500635?text=Hello!" target="_blank">
+            <i class="fab fa-whatsapp" style="font-size: 50px; color: #25D366;"></i>
+        </a>
+    </div>
+
+    <!-- Theme toggle button -->
+    <button class="theme-toggle-btn" id="theme-toggle-btn">
+        <i class="bi bi-moon"></i>
+    </button>
+
+    <div class="controls">
+        <div class="control active-btn" data-id="home">
+            <i class="fas fa-home"></i>
+        </div>
+        <div class="control" data-id="about">
+            <i class="fas fa-user"></i>
+        </div>
+        <div class="control" data-id="portfolio">
+            <i class="fas fa-briefcase"></i>
+        </div>
+        <div class="control" data-id="blogs">
+            <i class="far fa-newspaper"></i>
+        </div>
+        <div class="control" data-id="contact">
+            <i class="fas fa-envelope-open"></i>
+        </div>
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+
+    <!-- for option block -->
+    <script type="text/javascript">
+        // Function to create and display Bootstrap alert at the top
+        function showBootstrapAlert(message) {
+            // Create the alert div
+            var alertDiv = document.createElement("div");
+            alertDiv.className = "alert alert-danger alert-dismissible fade show top-alert";  // Added 'top-alert' class here
+            alertDiv.role = "alert";
+            alertDiv.innerHTML = message +
+                '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+
+            // Append the alert to the body (or any other container)
+            document.body.appendChild(alertDiv);
+
+            // Auto-dismiss the alert after 5 seconds
+            setTimeout(function () {
+                alertDiv.classList.remove('show');
+            }, 5000);
+        }
+
+        // Disable right-click (context menu)
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault(); // Prevent right-click menu
+            showBootstrapAlert("Oops, something went wrong!");
+        });
+
+        // Disable common keyboard shortcuts
+        document.addEventListener('keydown', function (e) {
+            // Disable right-click related shortcuts (like Ctrl+U, Ctrl+S, etc.)
+            if (e.key === "F12" || e.ctrlKey && (e.key === "U" || e.key === "S" || e.key === "C" || e.key === "I" || e.key === "J")) {
+                e.preventDefault(); // Disable the shortcut
+                showBootstrapAlert("Oops, something went wrong!");
+            }
+        });
+
+        // Disable F12 (Developer Tools) from opening
+        document.addEventListener('keydown', function (e) {
+            if (e.key === "F12") {
+                e.preventDefault(); // Disable F12 key (dev tools)
+                showBootstrapAlert("Oops, something went wrong!");
+            }
+        });
+
+        // Disable right-click (mouse)
+        document.addEventListener('mousedown', function (e) {
+            if (e.button === 2) {  // Right mouse button
+                e.preventDefault(); // Disable right-click
+            }
+        });
+    </script>
+
+    <!-- it is for skill percentage -->
+    <script>
+        // Function to animate individual progress bars
+        function animateProgressBar(entry, speed) {
+            const span = entry.target.querySelector("span");
+            const percentage = parseInt(span.getAttribute("data-percent"));
+            const progText = entry.target.querySelector(".prog-text");
+
+            let currentPercentage = 0;
+            const increment = () => {
+                if (currentPercentage < percentage) {
+                    currentPercentage += speed; // Increment by the speed value
+                    if (currentPercentage > percentage) currentPercentage = percentage; // Ensure it doesn't overshoot
+                    span.style.width = `${currentPercentage}%`;
+                    progText.textContent = `${currentPercentage}%`;
+                    setTimeout(increment, 26); // Control frame rate (16ms for ~60fps)
+                }
+            };
+            increment();
+        }
+
+        // Set up Intersection Observer for individual progress bars
+        document.addEventListener("DOMContentLoaded", () => {
+            const progressBars = document.querySelectorAll(".progress-bar");
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const speed = 2; // Adjust speed (higher values are faster)
+                        animateProgressBar(entry, speed);
+                        observer.unobserve(entry.target); // Stop observing after animation
+                    }
+                });
+            }, {
+                threshold: 0.5, // Trigger when 50% of the progress bar is visible
+            });
+
+            progressBars.forEach(bar => observer.observe(bar));
+        });
+    </script>
+
+    <!-- it is for project percentage -->
+    <script>
+        // Function to animate the numbers
+        function animateNumbers(entry, speed) {
+            const numberElement = entry.target.querySelector(".large-text");
+            const target = parseInt(numberElement.getAttribute("data-target"));
+            let currentNumber = 0;
+
+            const increment = () => {
+                if (currentNumber < target) {
+                    currentNumber += 1; // Increment by 1 (integer step)
+                    if (currentNumber > target) currentNumber = target; // Ensure it doesn't overshoot
+                    numberElement.textContent = currentNumber + "+";
+                    setTimeout(increment, speed); // Delay between increments to control speed
+                }
+            };
+
+            increment();
+        }
+
+        // Set up Intersection Observer for individual numbers
+        document.addEventListener("DOMContentLoaded", () => {
+            const numberItems = document.querySelectorAll(".about-item");
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const speed = 50; // Speed controlled by delay (in milliseconds)
+                        animateNumbers(entry, speed);
+                        observer.unobserve(entry.target); // Stop observing after animation
+                    }
+                });
+            }, {
+                threshold: 0.5, // Trigger when 50% of the number item is visible
+            });
+
+            numberItems.forEach(item => observer.observe(item));
+        });
+    </script>
+
+
+    <!-- whats app -->
+    <script type="text/javascript">
+        (function () {
+            var options = {
+                whatsapp: "1234567890", // Your WhatsApp number
+                call_to_action: "Chat with us", // Call to action text
+                position: "right", // Position of the widget (right or left)
+            };
+            var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+            var s = document.createElement('script');
+            s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function () { GetButton.init(options); };
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })();
+    </script>
+
+</body>
+
+</html>
