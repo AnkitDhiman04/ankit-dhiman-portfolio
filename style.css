@@ -995,7 +995,7 @@ div#whatsappIcon {
     overflow: hidden;
     white-space: nowrap;
     background-color: transparent;
-    color: #fff;
+    color: var(--color-secondary);
     padding: 10px 0;
     position: absolute;
     top: 0;
