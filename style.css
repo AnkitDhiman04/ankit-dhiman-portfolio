@@ -365,7 +365,7 @@ img:hover,
 }
 
 .about-stats {
-    padding-bottom: 4rem;
+    padding-bottom: 5rem;
 }
 
 .about-stats .progress-bars {
@@ -465,6 +465,98 @@ p.prog-text {
     background-color: var(--color-grey-5);
     transform: translateX(-50%);
 }
+
+
+/* swiper of card */
+/* div.card-swiper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+swiper-slide {
+    width: 280px;
+    height: 320px;
+}
+
+swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    color: #fff;
+}
+
+swiper-slide i {
+    font-size: 60px;
+}
+
+swiper-slide h2 {
+    font-size: 35px;
+    font-weight: 700;
+    padding: 8px 0;
+    margin: 0;
+}
+
+swiper-slide p {
+    font-size: 18px;
+    width: 80%;
+}
+
+swiper-slide ul {
+    font-size: 18px;
+    padding: 8px 0;
+    margin: 0;
+    width: 70%;
+}
+
+swiper-slide li {
+    list-style: inside;
+}
+
+swiper-slide:nth-child(1n) {
+    background-color: rgb(206, 17, 17);
+}
+
+swiper-slide:nth-child(2n) {
+    background-color: rgb(0, 140, 255);
+}
+
+swiper-slide:nth-child(3n) {
+    background-color: rgb(10, 184, 111);
+}
+
+swiper-slide:nth-child(4n) {
+    background-color: rgb(211, 122, 7);
+}
+
+swiper-slide:nth-child(5n) {
+    background-color: rgb(118, 163, 12);
+}
+
+swiper-slide:nth-child(6n) {
+    background-color: rgb(180, 10, 47);
+}
+
+swiper-slide:nth-child(7n) {
+    background-color: rgb(35, 99, 19);
+}
+
+swiper-slide:nth-child(8n) {
+    background-color: rgb(0, 68, 255);
+}
+
+swiper-slide:nth-child(9n) {
+    background-color: rgb(218, 12, 218);
+}
+
+swiper-slide:nth-child(10n) {
+    background-color: rgb(54, 94, 77);
+}
+
+
 
 /*Timeline*/
 .timeline {
@@ -988,6 +1080,36 @@ div#whatsappIcon {
     font-weight: 600;
 }
 
+
+/* marque css */
+
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
 @media (max-width: 768px) {
 
     /* Ensure icons and labels are stacked and take full width on mobile */
@@ -1027,6 +1149,7 @@ div#whatsappIcon {
     transition: background-color 0.3s;
     border-radius: 50%;
     font-size: 1.5rem;
+    z-index: 1;
 }
 
 .theme-toggle-btn:hover {
@@ -1076,6 +1199,24 @@ div#whatsappIcon {
     }
     .contact-content-con {
         padding-top: 2rem;
+    }
+    swiper-slide {
+        height: 420px;
+    }
+    swiper-slide i {
+        font-size: 30px;
+    }
+    
+    swiper-slide h2 {
+        font-size: 24px;
+    }
+    
+    swiper-slide p {
+        font-size: 15px;
+    }
+    
+    swiper-slide ul {
+        font-size: 15px;
     }
 }
 
