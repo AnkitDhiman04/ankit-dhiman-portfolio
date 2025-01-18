@@ -1004,7 +1004,7 @@ div#whatsappIcon {
 
 .marquee-content {
     display: inline-block;
-    animation: scroll 10s linear infinite;
+    animation: scroll 25s linear infinite;
 }
 
 @keyframes scroll {
