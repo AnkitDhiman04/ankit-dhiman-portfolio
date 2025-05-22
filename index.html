@@ -117,7 +117,7 @@
                     Hi, I'm <span>Ankit Dhiman.</span>
                 </h1>
 
-                <h2 id="role-title" style="color: #ffd500; font-weight: bold;">Web Designer</h2>
+                <h2 id="role-title">Web <span>Designer</span></h2>
 
                 <p id="role-desc">
                     Hey, I'm Front-end Designer. I did 10+ Projects. I love to
@@ -807,14 +807,16 @@
     <script>
   const roles = [
     {
-      title: "Web Designer",
+      title: "Designer",
       description: "Hey, I'm Front-end Designer. I did 20+ Projects. I love to create beautiful and functional websites.",
-      resumeUrl: "https://res.cloudinary.com/dojdau6b2/image/upload/v1747894929/Ankit_WebDesigner_a4w2zf.pdf"
+      resumeUrl: "https://res.cloudinary.com/dojdau6b2/image/upload/v1747894929/Ankit_WebDesigner_a4w2zf.pdf",
+      btntext:"Desinger"
     },
     {
-      title: "Web Developer",
-      description: "Hey, I'm Front-end Developer. I did 5+ Projects. I love to create beautiful and functional websites.",
-      resumeUrl: "https://res.cloudinary.com/dojdau6b2/image/upload/v1747894929/Ankit_WebDeveloper_fbugv1.pdf"
+      title: "Developer",
+      description: "Front-end Developer who turns ideas into interactive web experiences. Delivered 10+ high-performance websites using modern tech and clean, maintainable code.",
+      resumeUrl: "https://res.cloudinary.com/dojdau6b2/image/upload/v1747894929/Ankit_WebDeveloper_fbugv1.pdf",
+      btntext:"Developer"
     }
   ];
 
@@ -823,9 +825,11 @@
   setInterval(() => {
     index = (index + 1) % roles.length;
 
-    document.getElementById("role-title").textContent = roles[index].title;
+document.querySelector("#role-title span").textContent = roles[index].title;
     document.getElementById("role-desc").textContent = roles[index].description;
     document.getElementById("resume-btn").href = roles[index].resumeUrl;
+    document.querySelector(".btn-text").textContent = roles[index].btntext;
+
   }, 5000);
 </script>
 
