@@ -1021,7 +1021,7 @@ div#whatsappIcon {
 #role-title {
     font-size: 1.8rem;
     margin-top: 0.5rem;
-    color: #fff;
+    color: var(--bs-heading-color);
     font-weight: bold;
     animation: fadeIn 0.5s ease-in-out;
 }
