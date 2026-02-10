@@ -198,10 +198,12 @@ img:hover,
     align-self: flex-start;
     align-items: center;
     overflow: hidden;
+    width: 235px;
+    justify-content: space-between;
 }
 
 .main-btn .btn-text {
-    padding: 0 2rem;
+    padding: 0 20px;
 }
 
 .main-btn .btn-icon {
@@ -1517,5 +1519,6 @@ div#whatsappIcon {
         font-size: 4rem;
     }
 }
+
 
 /*# sourceMappingURL=styles.css.map */
