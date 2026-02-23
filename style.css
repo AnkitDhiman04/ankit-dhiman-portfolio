@@ -175,6 +175,43 @@ img:hover,
     color: var(--color-secondary);
 }
 
+.right-header h2 {
+    font-weight: 600;
+    background: linear-gradient(90deg,
+            #FFD700,
+            #27ae60,
+            #eb8ef3,
+            #2bff00,
+            #00aeff);
+    background-size: 200% 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: moveGradient 12s linear infinite;
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    25% {
+        background-position: 100% 50%;
+    }
+
+    50% {
+        background-position: 0% 50%;
+    }
+
+    75% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 .header-content .right-header p {
     margin: 1.5rem 0;
     line-height: 2rem;
@@ -238,8 +275,9 @@ img:hover,
     transform: translateX(0);
     transition: all 0.4s ease-out;
 }
+
 .clip-path {
-  clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
+    clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
 }
 
 /* header download cv button css end */
@@ -967,7 +1005,6 @@ div#whatsappIcon {
     bottom: 20px;
     right: 30px;
     transition: all 0.3s ease;
-    background-color: white;
     width: 65px;
     height: 65px;
     display: flex;
