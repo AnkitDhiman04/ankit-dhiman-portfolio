@@ -1,5 +1,4 @@
 // it is for dark and light mode button
-
 const themeToggleBtn = document.getElementById('theme-toggle-btn');
 const body = document.body;
 const icon = themeToggleBtn.querySelector('i');

@@ -10,6 +10,7 @@
 :root {
     --color-primary: #191d2b;
     --color-secondary: #FFD700;
+    --color-secondary-inverse: #27ae60;
     --color-image: #fae884;
     --color-white: #FFFFFF;
     --color-black: #000;
@@ -28,6 +29,7 @@
 .light-mode {
     --color-primary: #FFFFFF;
     --color-secondary: #27ae60;
+    --color-secondary-inverse: #FFD700;
     --color-image: #65f8a2;
     --color-white: #454e56;
     --color-black: #000;
@@ -765,11 +767,11 @@ button.blog-btn {
 button.blog-btn:hover,
 :focus {
     color: #ffffff;
-    background: #ffeb3b;
-    border: 1px solid #ffeb3b;
+    background: var(--color-secondary);
+    border: 1px solid var(--color-secondary-inverse);
     text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
-    box-shadow: 0 0 5px #ffeb3b, 0 0 20px #ffeb3b, 0 0 50px #ffeb3b,
-        0 0 100px #008cff;
+    box-shadow: 0 0 5px var(--color-secondary-inverse), 0 0 20px var(--color-secondary-inverse), 0 0 50px var(--color-secondary-inverse),
+        0 0 100px var(--color-secondary-inverse);
 }
 
 
