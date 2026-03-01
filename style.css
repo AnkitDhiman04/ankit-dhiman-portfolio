@@ -10,6 +10,7 @@
 :root {
     --color-primary: #191d2b;
     --color-secondary: #FFD700;
+    --color-image: #fae884;
     --color-white: #FFFFFF;
     --color-black: #000;
     --color-grey0: #f8f8f8;
@@ -27,6 +28,7 @@
 .light-mode {
     --color-primary: #FFFFFF;
     --color-secondary: #27ae60;
+    --color-image: #65f8a2;
     --color-white: #454e56;
     --color-black: #000;
     --color-grey0: #f8f8f8;
@@ -129,13 +131,12 @@ img {
 
 img:hover,
 :focus {
-    background: #ffeb3b;
-    /* Lighter golden color for hover/focus */
-    border: 1px solid #ffeb3b;
-    /* Lighter golden border */
-    text-shadow: 0 0 5px #ffeb3b, 0 0 10px #ffeb3b, 0 0 20px #ffeb3b;
-    box-shadow: 0 0 5px #ffeb3b, 0 0 20px #ffeb3b, 0 0 50px #ffeb3b, 0 0 100px #ffeb3b;
+    background-color: var(--color-image);
+    border: 1px solid var(--color-image);
+    text-shadow: 0 0 5px var(--color-image), 0 0 10px var(--color-image), 0 0 20px var(--color-image);
+    box-shadow: 0 0 5px var(--color-image), 0 0 20px var(--color-image), 0 0 50px var(--color-image), 0 0 100px var(--color-secondary);
 }
+
 
 
 .header-content .left-header .image {
