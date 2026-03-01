@@ -1513,6 +1513,15 @@ div#whatsappIcon {
         text-align: center;
         padding-top: 3rem;
     }
+
+    .right-header h2, .right-header p {
+        text-align: center;
+    }
+
+    .right-header div {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 768px) {

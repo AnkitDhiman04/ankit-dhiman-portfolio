@@ -1,66 +1,43 @@
 // it is for dark and light mode button
-// const themeToggleBtn = document.getElementById('theme-toggle-btn');
-// const body = document.body;
-
-// themeToggleBtn.addEventListener('click', () => {
-//     body.classList.toggle('light-mode');
-//     // Change icon based on theme
-//     const icon = themeToggleBtn.querySelector('i');
-//     if (body.classList.contains('light-mode')) {
-//         icon.classList.replace('bi-moon', 'bi-sun');
-//     } else {
-//         icon.classList.replace('bi-sun', 'bi-moon');
-//     }
-// });
 
 const themeToggleBtn = document.getElementById('theme-toggle-btn');
 const body = document.body;
-const icon = themeToggleBtn.querySelector('.bi-moon');
+const icon = themeToggleBtn.querySelector('i');
 
-// 1️⃣ Page load pe theme set karo
+/* ---------- PAGE LOAD ---------- */
 window.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('theme');
 
   if (savedTheme === 'light') {
     body.classList.add('light-mode');
-    icon.classList.replace('bi-sun', 'bi-moon');
-} else {
+    setMoonIcon(); // 👈 light mode → moon icon
+  } else {
     body.classList.remove('light-mode');
-    icon.classList.replace('bi-moon', 'bi-sun');
+    setSunIcon(); // 👈 dark mode → sun icon
   }
 });
 
-// 2️⃣ Button click pe theme toggle karo
+/* ---------- BUTTON CLICK ---------- */
 themeToggleBtn.addEventListener('click', () => {
-  body.classList.toggle('light-mode');
-
-  const isLight = body.classList.contains('light-mode');
-
+  const isLight = body.classList.toggle('light-mode');
   localStorage.setItem('theme', isLight ? 'light' : 'dark');
 
-  icon.classList.replace(
-    isLight ? 'bi-moon' : 'bi-sun',
-    isLight ? 'bi-sun' : 'bi-moon'
-  );
+  // 👇 INVERTED ICON LOGIC
+  isLight ? setMoonIcon() : setSunIcon();
 });
 
+/* ---------- ICON FUNCTIONS ---------- */
+function setSunIcon() {
+  icon.classList.remove('bi-moon');
+  icon.classList.add('bi-sun');
+}
+
+function setMoonIcon() {
+  icon.classList.remove('bi-sun');
+  icon.classList.add('bi-moon');
+}
 
 
-
-// it is for active and de-active button
-(function () {
-    [...document.querySelectorAll(".control")].forEach(button => {
-        button.addEventListener("click", function () {
-            document.querySelector(".active-btn").classList.remove("active-btn");
-            this.classList.add("active-btn");
-            document.querySelector(".active").classList.remove("active");
-            document.getElementById(button.dataset.id).classList.add("active");
-        })
-    });
-    document.querySelector(".theme-btn").addEventListener("click", () => {
-        document.body.classList.toggle("light-mode");
-    })
-})();
 
 
 
