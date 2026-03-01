@@ -53,47 +53,47 @@ function setMoonIcon() {
 
 
 // blocking inspect options
-function showBootstrapAlert(message) {
-    var alertDiv = document.createElement("div");
-    alertDiv.className = "alert alert-danger alert-dismissible fade show top-alert";  // Added 'top-alert' class here
-    alertDiv.role = "alert";
-    alertDiv.innerHTML = message +
-        '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+// function showBootstrapAlert(message) {
+//     var alertDiv = document.createElement("div");
+//     alertDiv.className = "alert alert-danger alert-dismissible fade show top-alert";  // Added 'top-alert' class here
+//     alertDiv.role = "alert";
+//     alertDiv.innerHTML = message +
+//         '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
 
-    // Append the alert to the body (or any other container)
-    document.body.appendChild(alertDiv);
+//     // Append the alert to the body (or any other container)
+//     document.body.appendChild(alertDiv);
 
-    // Auto-dismiss the alert after 5 seconds
-    setTimeout(function () {
-        alertDiv.classList.remove('show');
-    }, 5000);
-}
-// Disable right-click (context menu)
-document.addEventListener('contextmenu', function (e) {
-    e.preventDefault(); // Prevent right-click menu
-    showBootstrapAlert("Oops, something went wrong!");
-});
-// Disable common keyboard shortcuts
-document.addEventListener('keydown', function (e) {
-    // Disable right-click related shortcuts (like Ctrl+U, Ctrl+S, etc.)
-    if (e.key === "F12" || e.ctrlKey && (e.key === "U" || e.key === "S" || e.key === "C" || e.key === "I" || e.key === "J")) {
-        e.preventDefault(); // Disable the shortcut
-        showBootstrapAlert("Oops, something went wrong!");
-    }
-});
-// Disable F12 (Developer Tools) from opening
-document.addEventListener('keydown', function (e) {
-    if (e.key === "F12") {
-        e.preventDefault(); // Disable F12 key (dev tools)
-        showBootstrapAlert("Oops, something went wrong!");
-    }
-});
-// Disable right-click (mouse)
-document.addEventListener('mousedown', function (e) {
-    if (e.button === 2) {  // Right mouse button
-        e.preventDefault(); // Disable right-click
-    }
-});
+//     // Auto-dismiss the alert after 5 seconds
+//     setTimeout(function () {
+//         alertDiv.classList.remove('show');
+//     }, 5000);
+// }
+// // Disable right-click (context menu)
+// document.addEventListener('contextmenu', function (e) {
+//     e.preventDefault(); // Prevent right-click menu
+//     showBootstrapAlert("Oops, something went wrong!");
+// });
+// // Disable common keyboard shortcuts
+// document.addEventListener('keydown', function (e) {
+//     // Disable right-click related shortcuts (like Ctrl+U, Ctrl+S, etc.)
+//     if (e.key === "F12" || e.ctrlKey && (e.key === "U" || e.key === "S" || e.key === "C" || e.key === "I" || e.key === "J")) {
+//         e.preventDefault(); // Disable the shortcut
+//         showBootstrapAlert("Oops, something went wrong!");
+//     }
+// });
+// // Disable F12 (Developer Tools) from opening
+// document.addEventListener('keydown', function (e) {
+//     if (e.key === "F12") {
+//         e.preventDefault(); // Disable F12 key (dev tools)
+//         showBootstrapAlert("Oops, something went wrong!");
+//     }
+// });
+// // Disable right-click (mouse)
+// document.addEventListener('mousedown', function (e) {
+//     if (e.button === 2) {  // Right mouse button
+//         e.preventDefault(); // Disable right-click
+//     }
+// });
 
 
 

@@ -774,6 +774,10 @@ button.blog-btn:hover,
         0 0 100px var(--color-secondary-inverse);
 }
 
+.theme-toggle-btn:hover, :focus {
+     box-shadow: 0 0 5px var(--color-secondary), 0 0 20px var(--color-secondary), 0 0 50px var(--color-secondary),
+        0 0 100px var(--color-secondary);
+}
 
 /* blog section css end */
 
