@@ -98,41 +98,6 @@ document.addEventListener('mousedown', function (e) {
 
 
 
-//  it is for skill percentage 
-function animateProgressBar(entry, speed) {
-    const span = entry.target.querySelector("span");
-    const percentage = parseInt(span.getAttribute("data-percent"));
-    const progText = entry.target.querySelector(".prog-text");
-
-    let currentPercentage = 0;
-    const increment = () => {
-        if (currentPercentage < percentage) {
-            currentPercentage += speed; // Increment by the speed value
-            if (currentPercentage > percentage) currentPercentage = percentage; // Ensure it doesn't overshoot
-            span.style.width = `${currentPercentage}%`;
-            progText.textContent = `${currentPercentage}%`;
-            setTimeout(increment, 26); // Control frame rate (16ms for ~60fps)
-        }
-    };
-    increment();
-}
-// Set up Intersection Observer for individual progress bars
-document.addEventListener("DOMContentLoaded", () => {
-    const progressBars = document.querySelectorAll(".progress-bar");
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const speed = 2; // Adjust speed (higher values are faster)
-                animateProgressBar(entry, speed);
-                observer.unobserve(entry.target); // Stop observing after animation
-            }
-        });
-    }, {
-        threshold: 0.5, // Trigger when 50% of the progress bar is visible
-    });
-
-    progressBars.forEach(bar => observer.observe(bar));
-});
 
 
 

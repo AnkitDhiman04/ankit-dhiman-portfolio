@@ -58,7 +58,7 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-K88V6N45');</script>
 
-    
+
     <script src="script.js" defer></script>
 
     <title>
@@ -230,18 +230,18 @@
                     <div class="progress-bar">
                         <p class="prog-title">React.js</p>
                         <div class="progress-con">
-                            <p class="prog-text">80%</p>
+                            <p class="prog-text">85%</p>
                             <div class="progress">
-                                <span class="react" data-percent="75"></span>
+                                <span class="react" data-percent="85"></span>
                             </div>
                         </div>
                     </div>
                     <div class="progress-bar">
                         <p class="prog-title">Next.js</p>
                         <div class="progress-con">
-                            <p class="prog-text">75%</p>
+                            <p class="prog-text">80%</p>
                             <div class="progress">
-                                <span class="react" data-percent="75"></span>
+                                <span class="react" data-percent="80"></span>
                             </div>
                         </div>
                     </div>
@@ -250,7 +250,7 @@
                         <div class="progress-con">
                             <p class="prog-text">55%</p>
                             <div class="progress">
-                                <span class="react" data-percent="75"></span>
+                                <span class="react" data-percent="55"></span>
                             </div>
                         </div>
                     </div>
@@ -356,7 +356,7 @@
             </div>
         </section>
 
-        <!-- portfolio section -->
+        <!-- certificate section -->
         <section class="container-fluid" id="portfolio">
             <div class="main-title">
                 <h2>My <span id="portfolio-heading">Certifications</span></h2>
@@ -468,7 +468,7 @@
             </div>
         </section>
 
-        <!-- blog section -->
+        <!-- blog(project) section -->
         <section class="container-fluid" id="blogs">
             <div class="blogs-content">
                 <div class="main-title">
@@ -549,7 +549,8 @@
                                 authentication, admin panel, and secure payment gateways. Implemented file upload,
                                 role-based access control, and responsive design. <br>
                             </p>
-                            <button class="blog-btn" onclick="window.open('https://ankit-ecommerce-frontend.netlify.app/', '_blank')">
+                            <button class="blog-btn"
+                                onclick="window.open('https://ankit-ecommerce-frontend.netlify.app/', '_blank')">
                                 view more
                             </button>
                         </div>
@@ -734,8 +735,8 @@
 
 
 
-    <!-- it is for project percentage -->
     <script>
+        //  it is for project percentage 
         function animateNumbers(entry, speed) {
             const numberElement = entry.target.querySelector(".large-text");
             const target = parseInt(numberElement.getAttribute("data-target"));
@@ -769,6 +770,44 @@
             });
 
             numberItems.forEach(item => observer.observe(item));
+        });
+
+
+
+        //  it is for skill percentage 
+        function animateProgressBar(entry, speed) {
+            const span = entry.target.querySelector("span");
+            const percentage = parseInt(span.getAttribute("data-percent"));
+            const progText = entry.target.querySelector(".prog-text");
+
+            let currentPercentage = 0;
+            const increment = () => {
+                if (currentPercentage < percentage) {
+                    currentPercentage += speed; // Increment by the speed value
+                    if (currentPercentage > percentage) currentPercentage = percentage; // Ensure it doesn't overshoot
+                    span.style.width = `${currentPercentage}%`;
+                    progText.textContent = `${currentPercentage}%`;
+                    setTimeout(increment, 26); // Control frame rate (16ms for ~60fps)
+                }
+            };
+            increment();
+        }
+        // Set up Intersection Observer for individual progress bars
+        document.addEventListener("DOMContentLoaded", () => {
+            const progressBars = document.querySelectorAll(".progress-bar");
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const speed = 2; // Adjust speed (higher values are faster)
+                        animateProgressBar(entry, speed);
+                        observer.unobserve(entry.target); // Stop observing after animation
+                    }
+                });
+            }, {
+                threshold: 0.5, // Trigger when 50% of the progress bar is visible
+            });
+
+            progressBars.forEach(bar => observer.observe(bar));
         });
     </script>
 
