@@ -3,6 +3,9 @@ const themeToggleBtn = document.getElementById('theme-toggle-btn');
 const body = document.body;
 const icon = themeToggleBtn.querySelector('i');
 
+const metaThemeColor = document.getElementById("theme-color-meta")
+
+
 /* ---------- PAGE LOAD ---------- */
 window.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme');
@@ -10,9 +13,13 @@ window.addEventListener('DOMContentLoaded', () => {
     if (savedTheme === 'light') {
         body.classList.add('light-mode');
         setMoonIcon(); // 👈 light mode → moon icon
+        metaThemeColor.setAttribute("content", "#27ae60")
+
     } else {
         body.classList.remove('light-mode');
         setSunIcon(); // 👈 dark mode → sun icon
+        metaThemeColor.setAttribute("content", "#FFD700")
+
     }
 });
 
@@ -48,7 +55,7 @@ function setMoonIcon() {
             document.getElementById(button.dataset.id).classList.add("active");
         })
     });
-   
+
 })();
 
 
