@@ -22,12 +22,12 @@ window.addEventListener('DOMContentLoaded', () => {
     if (savedTheme === 'light') {
         body.classList.add('light-mode');
         setMoonIcon(); // 👈 light mode → moon icon
-         updateThemeColor("#89fdba");
+         updateThemeColor("#13a14e");
 
     } else {
         body.classList.remove('light-mode');
         setSunIcon(); // 👈 dark mode → sun icon
-        updateThemeColor("#fae77c");
+        updateThemeColor("#ccad00");
     }
 });
 
@@ -40,10 +40,10 @@ themeToggleBtn.addEventListener('click', () => {
     // 👇 INVERTED ICON LOGIC
     if (isLight) {
     setMoonIcon();
-    updateThemeColor("#89fdba"); // light theme color
+    updateThemeColor("#13a14e"); // light theme color
   } else {
     setSunIcon();
-    updateThemeColor("#fae77c"); // dark theme color
+    updateThemeColor("#ccad00"); // dark theme color
   }
 });
 
