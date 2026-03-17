@@ -23,12 +23,12 @@ window.addEventListener('DOMContentLoaded', () => {
     if (savedTheme === 'light') {
         body.classList.add('light-mode');
         setMoonIcon(); // 👈 light mode → moon icon
-        metaThemeColor.setAttribute("content", "#27ae60")
+        updateThemeColor("#27ae60");
 
     } else {
         body.classList.remove('light-mode');
         setSunIcon(); // 👈 dark mode → sun icon
-        metaThemeColor.setAttribute("content", "#FFD700")
+        updateThemeColor("#FFD700");
 
     }
 });
