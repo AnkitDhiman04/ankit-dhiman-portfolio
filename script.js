@@ -4,17 +4,16 @@ const body = document.body;
 const icon = themeToggleBtn.querySelector('i');
 
 function updateThemeColor(color) {
-    const meta = document.getElementById("theme-color-meta");
+  const meta = document.getElementById("theme-color-meta");
 
-    if (meta) {
-        meta.setAttribute("content", color);
-    }
+  if (meta) {
+    meta.setAttribute("content", color);
+  }
 
-    // 🔥 Chrome repaint trick (NO reload)
-    // window.scrollTo(0, 1);
-    // window.scrollTo(0, 0);
+  // 🔥 Chrome repaint trick (NO reload)
+  window.scrollTo(0, 1);
+  window.scrollTo(0, 0);
 }
-
 
 /* ---------- PAGE LOAD ---------- */
 window.addEventListener('DOMContentLoaded', () => {
@@ -23,29 +22,29 @@ window.addEventListener('DOMContentLoaded', () => {
     if (savedTheme === 'light') {
         body.classList.add('light-mode');
         setMoonIcon(); // 👈 light mode → moon icon
-        updateThemeColor("#27ae60");
+         updateThemeColor("#89fdba");
 
     } else {
         body.classList.remove('light-mode');
         setSunIcon(); // 👈 dark mode → sun icon
-        updateThemeColor("#FFD700");
-
+        updateThemeColor("#fae77c");
     }
 });
 
 /* ---------- BUTTON CLICK ---------- */
 themeToggleBtn.addEventListener('click', () => {
     const isLight = body.classList.toggle('light-mode');
+    
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
 
-    localStorage.setItem('theme', isLight ? 'light ' : 'dark');
-
+    // 👇 INVERTED ICON LOGIC
     if (isLight) {
-        setMoonIcon();
-        updateThemeColor("#27ae60"); // light theme color
-    } else {
-        setSunIcon();
-        updateThemeColor("#FFD700"); // dark theme color
-    }
+    setMoonIcon();
+    updateThemeColor("#89fdba"); // light theme color
+  } else {
+    setSunIcon();
+    updateThemeColor("#fae77c"); // dark theme color
+  }
 });
 
 /* ---------- ICON FUNCTIONS ---------- */
