@@ -3,7 +3,17 @@ const themeToggleBtn = document.getElementById('theme-toggle-btn');
 const body = document.body;
 const icon = themeToggleBtn.querySelector('i');
 
-const metaThemeColor = document.getElementById("theme-color-meta")
+function updateThemeColor(color) {
+  const meta = document.getElementById("theme-color-meta");
+
+  if (meta) {
+    meta.setAttribute("content", color);
+  }
+
+  // 🔥 Chrome repaint trick (NO reload)
+  window.scrollTo(0, 1);
+  window.scrollTo(0, 0);
+}
 
 
 /* ---------- PAGE LOAD ---------- */
@@ -26,10 +36,16 @@ window.addEventListener('DOMContentLoaded', () => {
 /* ---------- BUTTON CLICK ---------- */
 themeToggleBtn.addEventListener('click', () => {
     const isLight = body.classList.toggle('light-mode');
-    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    
+    localStorage.setItem('theme', isLight ? 'light ' : 'dark');
 
-    // 👇 INVERTED ICON LOGIC
-    isLight ? setMoonIcon() : setSunIcon();
+    if (isLight) {
+    setMoonIcon();
+    updateThemeColor("#27ae60"); // light theme color
+  } else {
+    setSunIcon();
+    updateThemeColor("#FFD700"); // dark theme color
+  }
 });
 
 /* ---------- ICON FUNCTIONS ---------- */
