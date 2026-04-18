@@ -9,6 +9,8 @@
 
 :root {
     --color-primary: #191d2b;
+    --color-contextMenu-primary: #FFFFFF;
+    --color-contextMenu: #454e56;
     --color-secondary: #FFD700;
     --color-secondary-inverse: #27ae60;
     --color-image: #fae884;
@@ -28,6 +30,8 @@
 
 .light-mode {
     --color-primary: #FFFFFF;
+    --color-contextMenu-primary: #191d2b;
+    --color-contextMenu: #FFFFFF;
     --color-secondary: #27ae60;
     --color-secondary-inverse: #FFD700;
     --color-image: #65f8a2;
@@ -48,6 +52,7 @@ body {
     font-size: 1.1rem;
     color: var(--color-white);
     transition: all 0.4s ease-in-out;
+    position: relative;
 }
 
 a {
@@ -55,6 +60,31 @@ a {
     text-decoration: none;
     color: inherit;
     font-family: inherit;
+}
+
+.context-menu {
+    position:absolute;
+    z-index: 100;
+    display:none;
+    padding: 15px 5px 0 5px;
+    background-color: var(--color-contextMenu-primary);
+    color: var(--color-contextMenu);
+    border-radius: 0px 20px 20px 20px; 
+    
+    ul li {
+        cursor:pointer;
+        padding : 8px 15px 8px 8px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    li:hover {
+        background-color: var(--color-secondary);
+        color: #FFFFFF;
+    }
+
+    ul li i {
+        padding-right: 8px;
+    }
 }
 
 

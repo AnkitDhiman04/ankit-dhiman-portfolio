@@ -73,6 +73,19 @@ function setMoonIcon() {
 
 })();
 
+// it is for active and de-active button pages
+(function () {
+    [...document.querySelectorAll(".mycontrol")].forEach(button => {
+        button.addEventListener("click", function () {
+            document.querySelector(".active-btn").classList.remove("active-btn");
+            this.classList.add("active-btn");
+            document.querySelector(".active").classList.remove("active");
+            document.getElementById(button.dataset.id).classList.add("active");
+        })
+    });
+
+})();
+
 
 // blocking inspect options
 function showBootstrapAlert(message) {
@@ -90,24 +103,60 @@ function showBootstrapAlert(message) {
         alertDiv.classList.remove('show');
     }, 5000);
 }
-// Disable right-click (context menu)
+
+
+const meinBody = document.querySelector('.main-content');
+const contextMenu = document.querySelector('.context-menu');
+
+//  right-click my custom context-menu
 document.addEventListener('contextmenu', function (e) {
     e.preventDefault(); // Prevent right-click menu
-    showBootstrapAlert("Oops, something went wrong!");
+    contextMenu.style.display = 'block';
+    contextMenu.style.visibility = "hidden";
+
+    const menuRect = contextMenu.getBoundingClientRect();    
+
+    const clickX = e.clientX;
+    const clickY = e.clientY;
+
+    let posX = clickX;
+    let posY = clickY;
+
+    if (clickX + menuRect.width > window.innerWidth) {
+        posX = window.innerWidth - menuRect.width;
+    }
+
+    if (clickY + menuRect.height > window.innerHeight) {
+        posY = window.innerHeight - menuRect.height;
+    }
+
+    contextMenu.style.top = `${posY}px`;
+    contextMenu.style.left = `${posX}px`;
+
+    contextMenu.style.visibility = "visible";
+
 });
+
+// for closing context menu when clicking on any of the options
+document.addEventListener('click', function () {
+    contextMenu.style.display = 'none'; // Hide context menu on any click
+});
+
+
+
 // Disable common keyboard shortcuts
 document.addEventListener('keydown', function (e) {
     // Disable right-click related shortcuts (like Ctrl+U, Ctrl+S, etc.)
     if (e.key === "F12" || e.ctrlKey && (e.key === "U" || e.key === "S" || e.key === "C" || e.key === "I" || e.key === "J")) {
         e.preventDefault(); // Disable the shortcut
-        showBootstrapAlert("Oops, something went wrong!");
+        showBootstrapAlert("You Are Trying To Do Something Wrong!");
     }
 });
 // Disable F12 (Developer Tools) from opening
 document.addEventListener('keydown', function (e) {
     if (e.key === "F12") {
         e.preventDefault(); // Disable F12 key (dev tools)
-        showBootstrapAlert("Oops, something went wrong!");
+        showBootstrapAlert("You Are Trying To Do Something Wrong!");
     }
 });
 // Disable right-click (mouse)
